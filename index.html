@@ -263,11 +263,23 @@ nav.scrolled {
   background-size: 300px;
 }
 
-/* VIDEO HERO — replace src with actual video file or Vimeo/YouTube embed */
+/* VIDEO HERO — YouTube background embed */
 .hero-video-wrap {
   position: absolute;
   inset: 0;
   overflow: hidden;
+}
+.hero-video-wrap iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.78vh; /* 16:9 ratio */
+  height: 100vh;
+  min-width: 100%;
+  min-height: 56.25vw; /* 16:9 ratio */
+  transform: translate(-50%, -50%);
+  opacity: 0.35;
+  pointer-events: none;
 }
 .hero-video-wrap video {
   width: 100%;
@@ -275,17 +287,6 @@ nav.scrolled {
   object-fit: cover;
   opacity: 0.35;
 }
-/* Fallback shown when no video is present */
-.hero-video-fallback {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #1a5c3a 0%, #0F3021 50%, #071a10 100%);
-}
-/* INSTRUCTIONS FOR AMY:
-   To add your showreel video:
-   Option A — Self-hosted: Replace the <video> tag src with your video file (mp4 recommended).
-   Option B — Vimeo background: Remove the <video> tag and use Vimeo's background player API.
-   The video plays muted and looped automatically at 35% opacity over the dark green. */
 
 .hero-content {
   position: relative;
@@ -454,12 +455,12 @@ nav.scrolled {
   background: var(--hero);
   position: relative;
 }
-/* PHOTO SLOT: Replace background-color with background-image: url('your-photo.jpg') */
+/* PHOTO SLOT: Hero intro arch frame */
 .arch-frame-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background: linear-gradient(160deg, #1a5c3a 0%, #0F3021 60%, #050f08 100%);
+  background: url('hero-stage.jpg') center/cover no-repeat;
 }
 .arch-accent {
   position: absolute;
@@ -633,12 +634,12 @@ nav.scrolled {
   overflow: hidden;
   position: relative;
 }
-/* PHOTO SLOT: Add Amy's headshot as object-fit cover image inside .founder-arch */
+/* PHOTO SLOT: Amy Morris headshot */
 .founder-arch-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background: linear-gradient(160deg, rgba(170,150,113,0.15) 0%, #0a2018 100%);
+  background: url('amy-headshot.jpg') center/cover no-repeat;
 }
 .founder-arch-name {
   position: absolute;
@@ -746,14 +747,16 @@ nav.scrolled {
 .sector-pattern-1 {
   background:
     linear-gradient(to top, rgba(15,48,33,0.6) 0%, transparent 60%),
-    linear-gradient(135deg, #1a4a2e 0%, #0a1f14 100%);
-  /* Replace with: background-image: url('your-land-photo.jpg'); */
+    url('sector-land.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .sector-pattern-2 {
   background:
     linear-gradient(to top, rgba(15,48,33,0.6) 0%, transparent 60%),
-    linear-gradient(225deg, #1a3a4a 0%, #0a1520 100%);
-  /* Replace with: background-image: url('your-sea-photo.jpg'); */
+    url('sector-sea.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* ─── WORK / CLIENTS ─── */
@@ -787,12 +790,12 @@ nav.scrolled {
   transition: transform 0.6s ease;
 }
 .work-card:hover .work-card-bg { transform: scale(1.04); }
-/* PHOTO SLOTS — replace each gradient with background-image: url('your-project-photo.jpg') */
-.w1 { background: linear-gradient(135deg, #1a4a2e 0%, #0F3021 100%); }
-.w2 { background: linear-gradient(200deg, #2a3a20 0%, #0F3021 100%); }
-.w3 { background: linear-gradient(160deg, #0d2818 0%, #1a5c3a 100%); }
-.w4 { background: linear-gradient(135deg, #3a2a15 0%, #0F3021 100%); }
-.w5 { background: linear-gradient(220deg, #1a2a3a 0%, #0F3021 100%); }
+/* PHOTO SLOTS — work card backgrounds */
+.w1 { background: url('work-miral.jpg') center/cover no-repeat; }
+.w2 { background: url('work-majid.jpg') center/cover no-repeat; }
+.w3 { background: url('work-trafford.jpg') center/cover no-repeat; }
+.w4 { background: url('work-fredolsen.jpg') center/cover no-repeat; }
+.w5 { background: url('work-private.jpg') center/cover no-repeat; }
 .work-card-overlay {
   position: absolute;
   inset: 0;
@@ -932,12 +935,14 @@ nav.scrolled {
 }
 /* PHOTO SLOTS for land & sea arched frames */
 .ls-arch-1 {
-  background: linear-gradient(160deg, rgba(170,150,113,0.2) 0%, rgba(15,48,33,0.8) 100%);
-  /* Replace with: background-image: url('your-stage-photo.jpg'); background-size: cover; */
+  background: url('arch-land.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .ls-arch-2 {
-  background: linear-gradient(200deg, rgba(26,92,58,0.6) 0%, rgba(5,15,8,0.9) 100%);
-  /* Replace with: background-image: url('your-cruise-photo.jpg'); background-size: cover; */
+  background: url('arch-sea.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .ls-arch-tag {
   margin-top: 12px;
@@ -1209,16 +1214,13 @@ footer { background: var(--hero); padding: 70px 0 40px; }
   <div class="hero-noise"></div>
 
   <div class="hero-video-wrap">
-    <!--
-      TO ADD YOUR SHOWREEL VIDEO:
-      Option A (self-hosted mp4): Uncomment the <video> tag below and set src to your file.
-      Option B (Vimeo): Remove the hero-video-fallback div and add Vimeo background embed.
-
-      <video autoplay muted loop playsinline>
-        <source src="your-showreel.mp4" type="video/mp4">
-      </video>
-    -->
-    <div class="hero-video-fallback"></div>
+    <iframe
+      src="https://www.youtube.com/embed/JMLFI3aOHW0?autoplay=1&mute=1&loop=1&playlist=JMLFI3aOHW0&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      title="Pop Up Global Showreel"
+    ></iframe>
   </div>
 
   <div class="hero-content">
