@@ -3,8 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pop Up Global — Creators of Bespoke Entertainment</title>
-<meta name="description" content="Pop Up Global is a boutique production company creating world-class original live entertainment for cruise lines, leisure venues and retail destinations — on land and at sea.">
+
+<!-- Primary SEO -->
+<title>Pop Up Global | Live Entertainment Production Company | UK & UAE</title>
+<meta name="description" content="Pop Up Global is a boutique live entertainment production company creating original, bespoke shows for cruise lines, leisure venues, retail destinations and corporate events. Operating across the UK and UAE.">
+<meta name="keywords" content="live entertainment production company, cruise entertainment, bespoke shows, leisure entertainment, retail entertainment, corporate events entertainment, UK entertainment company, UAE entertainment, live show production, original productions, Amy Morris, Pop Up Global">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Pop Up Global">
+<link rel="canonical" href="https://www.popup-global.com/">
+
+<!-- Open Graph (Facebook, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.popup-global.com/">
+<meta property="og:title" content="Pop Up Global | Live Entertainment Production Company">
+<meta property="og:description" content="Boutique live entertainment production for cruise lines, leisure venues, retail and corporate events. Original, bespoke shows created and delivered across the UK and UAE.">
+<meta property="og:image" content="https://www.popup-global.com/hero-stage.jpg">
+<meta property="og:site_name" content="Pop Up Global">
+<meta property="og:locale" content="en_GB">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pop Up Global | Live Entertainment Production Company">
+<meta name="twitter:description" content="Boutique live entertainment production for cruise lines, leisure venues, retail and corporate events. Original, bespoke shows across the UK and UAE.">
+<meta name="twitter:image" content="https://www.popup-global.com/hero-stage.jpg">
+
+<!-- Geo targeting -->
+<meta name="geo.region" content="GB">
+<meta name="geo.placename" content="United Kingdom">
+
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cormorant+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -697,13 +724,17 @@ nav.scrolled {
 .sectors-header .body-text { margin: 0 auto; text-align: center; }
 .sectors-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: clamp(20px, 3vw, 40px);
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2vw, 28px);
+}
+.sectors-grid .sector-card:nth-child(4),
+.sectors-grid .sector-card:nth-child(5) {
+  /* last 2 cards sit in columns 1 and 2 of the 3-col grid */
 }
 .sector-card {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 16/9;
+  aspect-ratio: 4/3;
   cursor: default;
 }
 .sector-card-bg {
@@ -743,6 +774,31 @@ nav.scrolled {
   margin-bottom: 12px;
 }
 .sector-desc { font-size: 12px; color: rgba(241,239,234,0.6); line-height: 1.7; max-width: 40ch; }
+.sector-cta {
+  background: var(--hero);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  border: 1px solid rgba(170,150,113,0.25);
+}
+.sector-cta-inner {
+  padding: clamp(28px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+.sector-cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.4vw, 34px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--bg);
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-transform: none;
+}
 /* PHOTO SLOTS for sector cards */
 .sector-pattern-1 {
   background:
@@ -754,7 +810,28 @@ nav.scrolled {
 .sector-pattern-2 {
   background:
     linear-gradient(to top, rgba(15,48,33,0.6) 0%, transparent 60%),
+    url('work-trafford.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.sector-pattern-3 {
+  background:
+    linear-gradient(to top, rgba(15,48,33,0.6) 0%, transparent 60%),
     url('sector-sea.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.sector-pattern-4 {
+  background:
+    linear-gradient(to top, rgba(15,48,33,0.6) 0%, transparent 60%),
+    url('work-private.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.sector-pattern-5 {
+  background:
+    linear-gradient(to top, rgba(15,48,33,0.6) 0%, transparent 60%),
+    url('arch-land.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -879,6 +956,79 @@ nav.scrolled {
   color: rgba(170,150,113,0.15);
   line-height: 1;
 }
+.testi-footer {
+  margin-top: 24px;
+}
+.testi-logo {
+  display: block;
+  max-height: 80px;
+  max-width: 220px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.75;
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+  margin-top: 20px;
+}
+.testi-card.featured .testi-logo {
+  filter: grayscale(100%) brightness(10);
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+/* ─── OUR CLIENTS ─── */
+.clients { background: var(--bg2); padding: clamp(60px, 8vw, 100px) 0; }
+.clients-header { text-align: center; margin-bottom: 52px; }
+.clients-header .label { color: var(--hero); opacity: 0.75; }
+.clients-header .section-title { color: var(--hero); }
+.clients-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.clients-marquee::before,
+.clients-marquee::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 80px;
+  z-index: 2;
+}
+.clients-marquee::before { left: 0; background: linear-gradient(to right, var(--bg2), transparent); }
+.clients-marquee::after  { right: 0; background: linear-gradient(to left, var(--bg2), transparent); }
+.clients-track {
+  display: flex;
+  width: max-content;
+  animation: clients-scroll 40s linear infinite;
+}
+.clients-track:hover { animation-play-state: paused; }
+@keyframes clients-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.clients-set {
+  display: flex;
+  align-items: center;
+  gap: clamp(32px, 4vw, 64px);
+  padding: 0 clamp(16px, 2vw, 32px);
+}
+.client-logo {
+  height: 64px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  opacity: 0.75;
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+  flex-shrink: 0;
+}
+.client-logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  mix-blend-mode: normal;
+}
 
 /* ─── LAND & SEA ─── */
 .land-sea {
@@ -903,7 +1053,8 @@ nav.scrolled {
 .land-sea-text .label { color: rgba(170,150,113,0.7); }
 .land-sea-text .section-title { color: var(--bg); margin-bottom: 24px; }
 .land-sea-text .body-text { color: rgba(241,239,234,0.6); margin-bottom: 40px; }
-.land-sea-stats { display: flex; gap: 48px; margin-bottom: 48px; }
+.land-sea-stats { display: flex; gap: 48px; margin-bottom: 48px; align-items: flex-end; }
+.land-sea-stats > div { display: flex; flex-direction: column; }
 .ls-stat-num {
   font-family: var(--font-display);
   font-size: 48px;
@@ -1162,7 +1313,7 @@ footer { background: var(--hero); padding: 70px 0 40px; }
   .founder-img-wrap { display: none; }
   .land-sea-inner { grid-template-columns: 1fr; }
   .land-sea-visual { display: none; }
-  .sectors-grid { grid-template-columns: 1fr; }
+  .sectors-grid { grid-template-columns: repeat(2, 1fr); }
   .work-grid { grid-template-columns: 1fr; }
   .work-card-wide { grid-row: span 1; }
   .testimonials-track { grid-template-columns: 1fr; }
@@ -1176,8 +1327,161 @@ footer { background: var(--hero); padding: 70px 0 40px; }
   .hero-title { font-size: clamp(48px, 12vw, 64px); }
   .services-grid { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr; }
+  .sectors-grid { grid-template-columns: 1fr; }
+  .sector-card { aspect-ratio: 3/2; }
+  .sector-cta { aspect-ratio: auto; min-height: 200px; }
+  .testimonials-track { grid-template-columns: 1fr; }
+  .why-grid { gap: 2px; }
+  .clients-marquee::before, .clients-marquee::after { width: 40px; }
 }
 </style>
+
+<!-- JSON-LD Structured Data for SEO & AI Search -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.popup-global.com/#organization",
+      "name": "Pop Up Global",
+      "alternateName": "Pop Up Global Ltd",
+      "url": "https://www.popup-global.com",
+      "logo": "https://www.popup-global.com/hero-stage.jpg",
+      "description": "Pop Up Global is a boutique live entertainment production company creating original, bespoke shows for cruise lines, leisure venues, retail destinations and corporate events across the UK and UAE.",
+      "foundingDate": "2015",
+      "founder": {
+        "@type": "Person",
+        "name": "Amy Morris",
+        "jobTitle": "Managing Director & Founder"
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "United Kingdom" },
+        { "@type": "Country", "name": "United Arab Emirates" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Live Entertainment Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Bespoke Show Creation",
+              "description": "Original live entertainment productions researched, crafted and tailored specifically to your audience profile. Never pulled from a catalogue."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Global Casting & Talent Management",
+              "description": "End-to-end performer management from global auditions through to ongoing welfare support."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Full Production & Direction",
+              "description": "Choreography, costume design, staging and technical direction for live entertainment programmes."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ongoing Programme Management",
+              "description": "Entertainment that runs night after night, season after season, engineered for ROI, longevity and audience loyalty."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Entertainment Consultancy",
+              "description": "Strategic entertainment consultancy for operators looking to evaluate, develop or transform their live entertainment offering."
+            }
+          }
+        ]
+      },
+      "knowsAbout": [
+        "Live Entertainment Production",
+        "Cruise Entertainment",
+        "Retail Entertainment",
+        "Leisure Entertainment",
+        "Corporate Events",
+        "Talent Management",
+        "Show Production",
+        "Cast Management"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/wearepopupglobal",
+        "https://www.linkedin.com/company/pop-up-global/",
+        "https://www.youtube.com/@popupglobal"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Business Enquiries",
+        "email": "hello@popup-global.com",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.popup-global.com/#website",
+      "url": "https://www.popup-global.com",
+      "name": "Pop Up Global",
+      "publisher": { "@id": "https://www.popup-global.com/#organization" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Pop Up Global do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pop Up Global is a boutique live entertainment production company that creates original, bespoke shows for cruise lines, leisure venues, shopping centres and corporate events. Every production is researched and tailored specifically to the client's audience — never pulled from a catalogue."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where does Pop Up Global operate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pop Up Global operates across the United Kingdom and the UAE, with offices in both countries. We deliver entertainment on land and at sea, including cruise ships, UK retail destinations, UAE leisure venues and international corporate events."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What sectors does Pop Up Global work in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pop Up Global works across five sectors: Leisure (theme parks, visitor attractions), Retail (shopping centres and retail destinations), Cruise (cruise lines including Fred. Olsen), Corporate Events, and Consultancy for operators looking to develop their entertainment offering."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who are Pop Up Global's clients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pop Up Global's clients include The Trafford Centre, Majid Al Futtaim, Fred. Olsen Cruise Lines, Miral Experiences, Mall of the Emirates, P&O Cruises, Selfridges, Savills, JLL, Emaar, The Dubai Mall, Manchester Airport, Vakkaru Maldives, Moet & Chandon, Dell, Disney, Conrad Hotels and Warner Bros."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Pop Up Global different from other entertainment companies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pop Up Global is a boutique company, not a large agency. Every show is 100% original and in-house creative. We work closely with each client as a partner, learning their venue, audience and goals. Our performer-first culture means happier talent and better shows."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -1186,19 +1490,19 @@ footer { background: var(--hero); padding: 70px 0 40px; }
   <button class="mobile-close" id="mobile-close">✕ Close</button>
   <a href="#services" onclick="closeMobileMenu()">What We Do</a>
   <a href="#work" onclick="closeMobileMenu()">Our Work</a>
-  <a href="#sectors" onclick="closeMobileMenu()">Land &amp; Sea</a>
+  <a href="#sectors" onclick="closeMobileMenu()">Where We Work</a>
   <a href="#about" onclick="closeMobileMenu()">About</a>
   <a href="#contact" onclick="closeMobileMenu()">Get In Touch</a>
 </div>
 
 <!-- ─── NAV ─── -->
-<nav id="main-nav">
+<nav id="main-nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="#" class="nav-logo">Pop Up <span class="accent">Global</span></a>
     <ul class="nav-links">
       <li><a href="#services">What We Do</a></li>
       <li><a href="#work">Our Work</a></li>
-      <li><a href="#sectors">Land &amp; Sea</a></li>
+      <li><a href="#sectors">Where We Work</a></li>
       <li><a href="#about">About</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Get In Touch</a>
@@ -1209,7 +1513,7 @@ footer { background: var(--hero); padding: 70px 0 40px; }
 </nav>
 
 <!-- ─── HERO ─── -->
-<section class="hero">
+<section class="hero" aria-label="Hero">
   <div class="hero-bg"></div>
   <div class="hero-noise"></div>
 
@@ -1224,16 +1528,15 @@ footer { background: var(--hero); padding: 70px 0 40px; }
   </div>
 
   <div class="hero-content">
-    <p class="hero-eyebrow">Boutique · Premium · Bespoke</p>
     <h1 class="hero-title">
-      We Create<br>
-      <em>Unforgettable</em><br>
-      Live Moments
+      Your Audience<br>
+      <em>Deserves</em><br>
+      the Extraordinary
     </h1>
     <p class="hero-subtitle">Original Entertainment · Land &amp; Sea · UK &amp; UAE</p>
     <div class="hero-bottom">
       <p class="hero-desc">
-        A boutique production company building world-class, original live entertainment that transforms spaces, captivates audiences and delivers real results.
+        Original live entertainment that transforms spaces, captivates audiences and delivers real results, on land and at sea.
       </p>
       <div class="hero-actions">
         <a href="#work" class="btn btn-light"><span>Explore Our Work</span></a>
@@ -1251,7 +1554,7 @@ footer { background: var(--hero); padding: 70px 0 40px; }
 <!-- ─── MARQUEE ─── -->
 <div class="marquee-strip">
   <div class="marquee-track">
-    <span class="marquee-item">Bespoke Show Creation <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Original Show Creation <span class="marquee-dot"></span></span>
     <span class="marquee-item">Original Productions <span class="marquee-dot"></span></span>
     <span class="marquee-item">Cruise &amp; Leisure <span class="marquee-dot"></span></span>
     <span class="marquee-item">Land &amp; Sea <span class="marquee-dot"></span></span>
@@ -1259,7 +1562,7 @@ footer { background: var(--hero); padding: 70px 0 40px; }
     <span class="marquee-item">Performer First <span class="marquee-dot"></span></span>
     <span class="marquee-item">ROI-Focused Entertainment <span class="marquee-dot"></span></span>
     <span class="marquee-item">End-to-End Production <span class="marquee-dot"></span></span>
-    <span class="marquee-item">Bespoke Show Creation <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Original Show Creation <span class="marquee-dot"></span></span>
     <span class="marquee-item">Original Productions <span class="marquee-dot"></span></span>
     <span class="marquee-item">Cruise &amp; Leisure <span class="marquee-dot"></span></span>
     <span class="marquee-item">Land &amp; Sea <span class="marquee-dot"></span></span>
@@ -1279,10 +1582,10 @@ footer { background: var(--hero); padding: 70px 0 40px; }
         <h2 class="section-title reveal reveal-delay-1">A Powerhouse of<br>Original Creative<br>Production</h2>
         <span class="accent-line reveal reveal-delay-2"></span>
         <p class="body-text reveal reveal-delay-2">
-          Pop Up Global is a boutique production house specialising in world-class, original live entertainment. With teams in the UK and UAE, we create unforgettable experiences across cruise, leisure, retail and one-off events — both on land and at sea.
+          Pop Up Global is a production house specialising in original live entertainment. With teams in the UK and UAE, we create unforgettable experiences across cruise, leisure, retail and events, on land and at sea.
         </p>
         <p class="body-text reveal reveal-delay-3" style="margin-top: 16px;">
-          At the heart of everything we do is storytelling. We don't just put on a show — we create moments that stop people in their tracks, connect with your audience, and make your venue impossible to forget.
+          At the heart of everything we do is storytelling. We don't just put on a show. We create moments that stop people in their tracks, connect with your audience, and make your venue impossible to forget.
         </p>
         <br>
         <a href="#about" class="btn btn-dark reveal reveal-delay-4"><span>Our Story</span></a>
@@ -1302,7 +1605,7 @@ footer { background: var(--hero); padding: 70px 0 40px; }
           </div>
           <div class="stat-box">
             <div class="stat-num">100%</div>
-            <div class="stat-label">Bespoke</div>
+            <div class="stat-label">In-House Creative</div>
           </div>
         </div>
       </div>
@@ -1330,22 +1633,78 @@ footer { background: var(--hero); padding: 70px 0 40px; }
       <div class="service-card reveal">
         <div class="service-num">01</div>
         <h3 class="service-title">Bespoke Show Creation</h3>
-        <p class="service-body">Every production is original. Researched, crafted and tailored specifically to your audience profile — never pulled from a catalogue.</p>
+        <p class="service-body">Every production is original. Researched, crafted and tailored specifically to your audience profile. Never pulled from a catalogue.</p>
       </div>
       <div class="service-card reveal reveal-delay-1">
         <div class="service-num">02</div>
         <h3 class="service-title">Global Casting &amp; Talent Management</h3>
-        <p class="service-body">End-to-end performer management from global auditions through to ongoing welfare support — built by performers, for performers.</p>
+        <p class="service-body">End-to-end performer management from global auditions through to ongoing welfare support, built by performers, for performers.</p>
       </div>
       <div class="service-card reveal reveal-delay-2">
         <div class="service-num">03</div>
         <h3 class="service-title">Full Production &amp; Direction</h3>
-        <p class="service-body">Choreography, costume design, staging and technical direction — premium experience from conception through to final bow.</p>
+        <p class="service-body">Choreography, costume design, staging and technical direction. Premium craft from conception through to final bow.</p>
       </div>
       <div class="service-card reveal reveal-delay-3">
         <div class="service-num">04</div>
         <h3 class="service-title">Ongoing Programme Management</h3>
-        <p class="service-body">Entertainment that runs night after night, season after season. Engineered for ROI, longevity and audience loyalty — not just one great moment.</p>
+        <p class="service-body">Entertainment that runs night after night, season after season. Engineered for ROI, longevity and audience loyalty. Not just one great moment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── OUR CLIENTS ─── -->
+<section class="clients" aria-label="Our Clients">
+  <div class="clients-header container">
+    <span class="label reveal">Our Clients</span>
+    <h2 class="section-title reveal reveal-delay-1">Proud to Work With</h2>
+  </div>
+  <div class="clients-marquee">
+    <div class="clients-track">
+      <!-- Set 1 -->
+      <div class="clients-set">
+        <img class="client-logo" src="logo-mall-of-emirates.png" alt="Mall of the Emirates">
+        <img class="client-logo" src="logo-dell.png" alt="Dell">
+        <img class="client-logo" src="logo-disney.png" alt="Disney">
+        <img class="client-logo" src="logo-conrad.png" alt="Conrad Hotels">
+        <img class="client-logo" src="logo-warnerbros.png" alt="Warner Bros">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/1_c5eaa97b-cbc2-41c7-8ae3-368e95be2a42.png" alt="Moet & Chandon">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/2_ab361208-f706-4d1b-ab96-391fbad3e273.png" alt="Savills">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/3_2fa06da4-a61c-4ceb-a00a-1489370a0e26.png" alt="The Trafford Centre">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/4_3823dbfd-3df0-4f7c-b58b-6e811d5e7d89.png" alt="Manchester Airport">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/5_9e9addea-2349-47e2-b688-6ccc5675311f.png" alt="The Dubai Mall">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/6_e99a9fb9-5975-4590-a6a1-92796a177813.png" alt="JLL">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/7_df8317d0-6f48-4f88-bee3-04fad939e96d.png" alt="Emaar">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/8_76329937-f09a-4103-b9a6-9fc7c73df127.png" alt="Fred. Olsen Cruise Lines">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/9_63f9b187-ab13-4ea8-93ff-0d3c518b06c1.png" alt="Vakkaru Maldives">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/10_5a2516ab-e5cc-4937-b412-723401b66698.png" alt="Ferrari World">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/11_9226e81a-614b-4474-8b9d-f7972ee3b260.png" alt="Miral">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/12_a7ea9135-68f6-41b2-bd4a-688eaf373cce.png" alt="Mountain View">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/13_9708eec0-cd10-4de4-bcf3-8c8ea9734638.png" alt="P&O Cruises">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/14_67d8e1ff-1313-4849-85be-54fdacfab704.png" alt="Selfridges">
+      </div>
+      <!-- Set 2 (duplicate for seamless loop) -->
+      <div class="clients-set" aria-hidden="true">
+        <img class="client-logo" src="logo-mall-of-emirates.png" alt="">
+        <img class="client-logo" src="logo-dell.png" alt="">
+        <img class="client-logo" src="logo-disney.png" alt="">
+        <img class="client-logo" src="logo-conrad.png" alt="">
+        <img class="client-logo" src="logo-warnerbros.png" alt="">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/1_c5eaa97b-cbc2-41c7-8ae3-368e95be2a42.png" alt="">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/2_ab361208-f706-4d1b-ab96-391fbad3e273.png" alt="">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/3_2fa06da4-a61c-4ceb-a00a-1489370a0e26.png" alt="">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/4_3823dbfd-3df0-4f7c-b58b-6e811d5e7d89.png" alt="">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/5_9e9addea-2349-47e2-b688-6ccc5675311f.png" alt="">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/6_e99a9fb9-5975-4590-a6a1-92796a177813.png" alt="">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/7_df8317d0-6f48-4f88-bee3-04fad939e96d.png" alt="">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/8_76329937-f09a-4103-b9a6-9fc7c73df127.png" alt="">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/9_63f9b187-ab13-4ea8-93ff-0d3c518b06c1.png" alt="">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/10_5a2516ab-e5cc-4937-b412-723401b66698.png" alt="">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/11_9226e81a-614b-4474-8b9d-f7972ee3b260.png" alt="">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/12_a7ea9135-68f6-41b2-bd4a-688eaf373cce.png" alt="">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/13_9708eec0-cd10-4de4-bcf3-8c8ea9734638.png" alt="">
+        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/14_67d8e1ff-1313-4849-85be-54fdacfab704.png" alt="">
       </div>
     </div>
   </div>
@@ -1357,32 +1716,32 @@ footer { background: var(--hero); padding: 70px 0 40px; }
     <div class="why-header">
       <div>
         <span class="label reveal">Why Pop Up Global</span>
-        <h2 class="section-title reveal reveal-delay-1">We Don't Follow<br>Trends. We Create<br>Them.</h2>
+        <h2 class="section-title reveal reveal-delay-1">The Way<br>We Work</h2>
       </div>
       <div>
         <p class="body-text reveal reveal-delay-2">
-          We're a boutique company that brings world-class standards with dedicated, specialist expertise. You get the creativity of a major agency with the care and intimacy of a close partner who knows your venue, your audience, and your goals.
+          We're not a faceless agency. We're a close partner who learns your venue, your audience and your goals. You get deep specialist expertise with the personal attention that only a company of our size can give.
         </p>
       </div>
     </div>
     <div class="why-grid">
       <div class="why-card reveal">
         <div class="why-card-icon">01</div>
-        <div class="why-card-num">Differentiator 01</div>
-        <h3 class="why-card-title">Original, Bespoke<br>Productions Only</h3>
-        <p class="why-card-body">We never pull from a catalogue. Every show is researched and built for your specific audience. That's not something any competitor can honestly say at our level.</p>
+        <div class="why-card-num">Our Approach 01</div>
+        <h3 class="why-card-title">People at the<br>Heart of It</h3>
+        <p class="why-card-body">From our performers to our clients, we believe great work comes from genuine care. Our performer-first culture means happier talent, longer runs, and shows your audiences can feel.</p>
       </div>
       <div class="why-card reveal reveal-delay-1">
         <div class="why-card-icon">02</div>
-        <div class="why-card-num">Differentiator 02</div>
-        <h3 class="why-card-title">Built by Performers,<br>For Performers</h3>
-        <p class="why-card-body">Our performer-first culture means our talent stays longer, cares more, and delivers more. Better shows, fewer last-minute issues, and passion your audiences can feel.</p>
+        <div class="why-card-num">Our Approach 02</div>
+        <h3 class="why-card-title">Your Venue.<br>Your Audience. Your Show.</h3>
+        <p class="why-card-body">We don't repurpose content. We study your space, understand your guests, and build something made specifically for you. No two clients ever get the same show.</p>
       </div>
       <div class="why-card reveal reveal-delay-2">
         <div class="why-card-icon">03</div>
-        <div class="why-card-num">Differentiator 03</div>
-        <h3 class="why-card-title">Entertainment That<br>Earns Its Place</h3>
-        <p class="why-card-body">We speak the language of leisure and retail operators. Everything we create is designed to deliver real commercial value — audience loyalty, return visits, and measurable ROI.</p>
+        <div class="why-card-num">Our Approach 03</div>
+        <h3 class="why-card-title">Creative Thinking.<br>Commercial Results.</h3>
+        <p class="why-card-body">We speak the language of leisure and retail operators. Everything we build is designed to drive return visits, audience loyalty, and real commercial results.</p>
       </div>
     </div>
   </div>
@@ -1397,7 +1756,7 @@ footer { background: var(--hero); padding: 70px 0 40px; }
         <div class="founder-arch">
           <div class="founder-arch-photo"></div>
           <div class="founder-arch-gradient"></div>
-          <span class="founder-arch-name">Amy Morris — Managing Director</span>
+          <span class="founder-arch-name">Amy Morris, Managing Director</span>
           <div class="founder-border"></div>
         </div>
       </div>
@@ -1406,42 +1765,77 @@ footer { background: var(--hero); padding: 70px 0 40px; }
         <blockquote class="reveal reveal-delay-1">
           "I started Pop Up Global with one clear goal in mind: to be the company performers dream of working for, and clients dream of working with. I'm so proud to say that we have built that."
         </blockquote>
-        <p class="founder-attr reveal reveal-delay-2">Amy Morris — Managing Director &amp; Founder</p>
+        <p class="founder-attr reveal reveal-delay-2">Amy Morris, Managing Director &amp; Founder</p>
         <p class="founder-bio reveal reveal-delay-3">
-          Amy founded Pop Up Global after years performing and directing across the industry. Her vision was simple: create a company where world-class entertainment and genuine human care aren't a trade-off — they're the same thing.
+          Pop Up Global was founded with a clear standard: exceptional entertainment, delivered without compromise. After years in the industry, I set out to build a company where creativity, quality and care for people are equally prioritised, because that's what truly sets great work apart.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── SECTORS / LAND & SEA ─── -->
+<!-- ─── SECTORS / WHERE WE WORK ─── -->
 <section class="section sectors" id="sectors">
   <div class="container">
     <div class="sectors-header">
       <span class="label reveal">Where We Work</span>
-      <h2 class="section-title reveal reveal-delay-1">The Only Boutique<br>Company on Land &amp; Sea</h2>
+      <h2 class="section-title reveal reveal-delay-1">Five Sectors.<br>One Standard.</h2>
       <span class="accent-line reveal reveal-delay-2" style="margin: 20px auto;"></span>
-      <p class="body-text reveal reveal-delay-2">We are one of the only boutique production companies operating across both the leisure industry and the cruise sector. Our productions are built to run night after night — engineered for lasting impact.</p>
+      <p class="body-text reveal reveal-delay-2">We operate across leisure, retail, cruise, events and consultancy. Our productions are built to run night after night, engineered for lasting impact on land and at sea.</p>
     </div>
     <div class="sectors-grid">
-      <!-- PHOTO SLOT: Add background-image to .sector-pattern-1 and .sector-pattern-2 -->
       <div class="sector-card reveal">
         <div class="sector-card-bg sector-pattern-1"></div>
         <div class="sector-card-overlay"></div>
         <div class="sector-card-content">
-          <span class="sector-tag">On Land</span>
-          <h3 class="sector-name">Leisure &amp; Retail Destinations</h3>
-          <p class="sector-desc">From major retail destinations and leisure venues to immersive seasonal programmes — entertainment that becomes part of your identity.</p>
+          <span class="sector-tag">Sector 01</span>
+          <h3 class="sector-name">Leisure</h3>
+          <p class="sector-desc">Theme parks, visitor attractions and leisure destinations. Entertainment programmes that drive footfall, dwell time and return visits.</p>
         </div>
       </div>
       <div class="sector-card reveal reveal-delay-1">
         <div class="sector-card-bg sector-pattern-2"></div>
         <div class="sector-card-overlay"></div>
         <div class="sector-card-content">
-          <span class="sector-tag">At Sea</span>
-          <h3 class="sector-name">Cruise Lines &amp; Ocean Venues</h3>
-          <p class="sector-desc">West End-standard productions aboard world-class cruise lines. Shows designed for repeat audiences and the unique demands of life at sea.</p>
+          <span class="sector-tag">Sector 02</span>
+          <h3 class="sector-name">Retail</h3>
+          <p class="sector-desc">Shopping centres and retail destinations. Seasonal programmes and year-round entertainment that make your venue a destination in its own right.</p>
+        </div>
+      </div>
+      <div class="sector-card reveal reveal-delay-2">
+        <div class="sector-card-bg sector-pattern-3"></div>
+        <div class="sector-card-overlay"></div>
+        <div class="sector-card-content">
+          <span class="sector-tag">Sector 03</span>
+          <h3 class="sector-name">Cruise</h3>
+          <p class="sector-desc">West End-standard productions designed for life at sea. Shows built for repeat audiences and the unique demands of the cruise environment.</p>
+        </div>
+      </div>
+      <div class="sector-card reveal reveal-delay-3">
+        <div class="sector-card-bg sector-pattern-4"></div>
+        <div class="sector-card-overlay"></div>
+        <div class="sector-card-content">
+          <span class="sector-tag">Sector 04</span>
+          <h3 class="sector-name">Events</h3>
+          <p class="sector-desc">One-off productions, corporate events and special occasions. Bespoke live experiences that leave a lasting impression.</p>
+        </div>
+      </div>
+      <div class="sector-card reveal reveal-delay-4">
+        <div class="sector-card-bg sector-pattern-5"></div>
+        <div class="sector-card-overlay"></div>
+        <div class="sector-card-content">
+          <span class="sector-tag">Sector 05</span>
+          <h3 class="sector-name">Consultancy</h3>
+          <p class="sector-desc">Strategic entertainment consultancy for operators looking to evaluate, develop or transform their live entertainment offering.</p>
+        </div>
+      </div>
+      <div class="sector-card sector-cta reveal reveal-delay-5">
+        <div class="sector-cta-inner">
+          <div>
+            <span class="sector-tag">Work With Us</span>
+            <h3 class="sector-cta-title">Ready to create something extraordinary?</h3>
+          </div>
+          <a href="#contact" class="btn btn-light"><span>Get In Touch</span></a>
         </div>
       </div>
     </div>
@@ -1465,7 +1859,7 @@ footer { background: var(--hero); padding: 70px 0 40px; }
         <div class="work-card-overlay"></div>
         <div class="work-card-info">
           <div class="work-client">Miral Experiences</div>
-          <div class="work-project">Bespoke Entertainment Programme</div>
+          <div class="work-project">Live Entertainment Programme</div>
           <div class="work-type">Full Production · UAE</div>
         </div>
       </div>
@@ -1474,7 +1868,7 @@ footer { background: var(--hero); padding: 70px 0 40px; }
         <div class="work-card-overlay"></div>
         <div class="work-card-info">
           <div class="work-client">Majid Al Futtaim</div>
-          <div class="work-project">Seasonal Entertainment Series</div>
+          <div class="work-project">Seasonal Entertainment Programme</div>
           <div class="work-type">Live Entertainment · UAE</div>
         </div>
       </div>
@@ -1492,7 +1886,7 @@ footer { background: var(--hero); padding: 70px 0 40px; }
         <div class="work-card-overlay"></div>
         <div class="work-card-info">
           <div class="work-client">Fred. Olsen Cruises</div>
-          <div class="work-project">Bolette — Stage Productions</div>
+          <div class="work-project">Bolette, Stage Productions</div>
           <div class="work-type">Cruise Production · At Sea</div>
         </div>
       </div>
@@ -1502,7 +1896,7 @@ footer { background: var(--hero); padding: 70px 0 40px; }
         <div class="work-card-info">
           <div class="work-client">Private Client</div>
           <div class="work-project">Immersive Theatrical Experience</div>
-          <div class="work-type">Bespoke Production · On Land</div>
+          <div class="work-type">Live Production · On Land</div>
         </div>
       </div>
     </div>
@@ -1510,44 +1904,58 @@ footer { background: var(--hero); padding: 70px 0 40px; }
 </section>
 
 <!-- ─── TESTIMONIALS ─── -->
-<section class="section testimonials">
+<section class="section testimonials" aria-label="Client Testimonials">
   <div class="container">
     <div class="testimonials-header">
       <span class="label reveal">What Clients Say</span>
       <h2 class="section-title reveal reveal-delay-1">In Their Own Words</h2>
     </div>
     <div class="testimonials-track">
-      <div class="testi-card featured reveal">
+      <div class="testi-card reveal">
         <div class="testi-mark">"</div>
         <p class="testi-quote">"Pop Up comes with a refreshing mindset and capabilities, rarely seen in the region when it comes to entertainment."</p>
-        <div class="testi-author">Salma Abassaly</div>
-        <div class="testi-company">Majid Al Futtaim</div>
+        <div class="testi-footer">
+          <div class="testi-author">Salma Abassaly</div>
+          <div class="testi-company">Majid Al Futtaim</div>
+        </div>
+        <img class="testi-logo" src="logo-mall-of-emirates.png" alt="Mall of the Emirates" onerror="this.style.display='none'">
       </div>
       <div class="testi-card reveal reveal-delay-1">
         <div class="testi-mark">"</div>
         <p class="testi-quote">"We have worked with Pop Up for many years, and they always go above &amp; beyond! From conception to completion, we are always left feeling proud."</p>
-        <div class="testi-author">Nikki Tansey</div>
-        <div class="testi-company">The Trafford Centre</div>
+        <div class="testi-footer">
+          <div class="testi-author">Nikki Tansey</div>
+          <div class="testi-company">The Trafford Centre</div>
+        </div>
+        <img class="testi-logo" src="https://www.jesrose.co.uk/cdn/shop/files/3_2fa06da4-a61c-4ceb-a00a-1489370a0e26.png" alt="The Trafford Centre" onerror="this.style.display='none'">
       </div>
       <div class="testi-card reveal reveal-delay-2">
         <div class="testi-mark">"</div>
         <p class="testi-quote">"Best shows I've seen outside of the West End and Broadway."</p>
-        <div class="testi-author">Guest Review</div>
-        <div class="testi-company">Fred. Olsen Bolette</div>
+        <div class="testi-footer">
+          <div class="testi-author">Guest Review</div>
+          <div class="testi-company">Fred. Olsen Bolette</div>
+        </div>
+        <img class="testi-logo" src="https://www.jesrose.co.uk/cdn/shop/files/8_76329937-f09a-4103-b9a6-9fc7c73df127.png" alt="Fred. Olsen Cruise Lines" onerror="this.style.display='none'">
       </div>
     </div>
     <div style="margin-top: 2px;" class="testimonials-track">
       <div class="testi-card reveal">
         <div class="testi-mark">"</div>
-        <p class="testi-quote">"I had the privilege to collaborate with Pop Up Global — the experience embodied industry professionalism, insight, and commitment to our brand and vision. They consistently went above and beyond expectations."</p>
-        <div class="testi-author">Christine Kerber</div>
-        <div class="testi-company">Miral Experiences</div>
+        <p class="testi-quote">"I had the privilege to collaborate with Pop Up Global. The experience embodied industry professionalism, insight, and commitment to our brand and vision. They consistently went above and beyond expectations."</p>
+        <div class="testi-footer">
+          <div class="testi-author">Christine Kerber</div>
+          <div class="testi-company">Miral Experiences</div>
+        </div>
+        <img class="testi-logo" src="https://www.jesrose.co.uk/cdn/shop/files/11_9226e81a-614b-4474-8b9d-f7972ee3b260.png" alt="Miral Experiences" onerror="this.style.display='none'">
       </div>
       <div class="testi-card reveal reveal-delay-1">
         <div class="testi-mark">"</div>
         <p class="testi-quote">"I found Pop Up to be one of the best entertainment companies I've ever worked for."</p>
-        <div class="testi-author">Performer</div>
-        <div class="testi-company">Pop Up Global</div>
+        <div class="testi-footer">
+          <div class="testi-author">Performer</div>
+          <div class="testi-company">Pop Up Global</div>
+        </div>
       </div>
       <div class="testi-card reveal reveal-delay-2" style="display:flex; flex-direction:column; justify-content:center; align-items:flex-start;">
         <p style="font-family: var(--font-heading); font-size: 11px; font-style: normal; letter-spacing: 0.22em; text-transform: uppercase; color: var(--hero); line-height: 1.6;">Ready to create something unforgettable together?</p>
@@ -1566,7 +1974,7 @@ footer { background: var(--hero); padding: 70px 0 40px; }
         <span class="label reveal">Our Reach</span>
         <h2 class="section-title reveal reveal-delay-1">On Land.<br>At Sea.<br>Always Exceptional.</h2>
         <p class="body-text reveal reveal-delay-2">
-          We are one of the only boutique companies with the operational experience, logistics expertise and creative depth to deliver world-class entertainment in both leisure venues and on cruise ships — without compromise.
+          We have the operational experience, logistics expertise and creative depth to deliver exceptional entertainment in both leisure venues and on cruise ships, without compromise.
         </p>
         <div class="land-sea-stats reveal reveal-delay-3">
           <div>
@@ -1578,8 +1986,8 @@ footer { background: var(--hero); padding: 70px 0 40px; }
             <div class="ls-stat-label">Office</div>
           </div>
           <div>
-            <div class="ls-stat-num">∞</div>
-            <div class="ls-stat-label">Productions</div>
+            <div class="ls-stat-num" style="font-size: clamp(28px, 3vw, 42px);">GLOBAL</div>
+            <div class="ls-stat-label">Reach</div>
           </div>
         </div>
         <a href="#contact" class="btn btn-light reveal reveal-delay-4"><span>Work With Us</span></a>
@@ -1605,7 +2013,7 @@ footer { background: var(--hero); padding: 70px 0 40px; }
     <div class="cta-inner">
       <span class="label reveal">Let's Work Together</span>
       <h2 class="cta-title reveal reveal-delay-1">
-        Your Audience<br>Deserves<br>the Extraordinary
+        We Create<br>Unforgettable<br>Live Moments
       </h2>
       <p class="cta-sub reveal reveal-delay-2">Tell us about your venue, your vision, your challenge.</p>
       <div class="cta-contact-details reveal reveal-delay-3">
@@ -1635,7 +2043,7 @@ footer { background: var(--hero); padding: 70px 0 40px; }
   <div class="container">
     <span class="label">For Performers</span>
     <h2 class="performers-title">Your Next Stage Starts Here</h2>
-    <p class="performers-body">We're always looking for world-class performers who share our passion for exceptional live entertainment. If you're interested in working with us, we'd love to hear from you.</p>
+    <p class="performers-body">We're always looking for exceptional performers who share our passion for live entertainment. If you're interested in working with us, we'd love to hear from you.</p>
     <a href="mailto:info@popup-global.com?subject=Performer Enquiry" class="btn btn-light"><span>Get In Touch</span></a>
   </div>
 </section>
@@ -1646,8 +2054,7 @@ footer { background: var(--hero); padding: 70px 0 40px; }
     <div class="footer-top">
       <div>
         <div class="footer-brand-name">Pop Up Global</div>
-        <div class="footer-brand-tag">Boutique · Premium · Bespoke</div>
-        <p class="footer-brand-desc">Creators of world-class original live entertainment for leisure, retail and cruise sectors — on land and at sea.</p>
+        <p class="footer-brand-desc">Creators of original live entertainment for leisure, retail and cruise sectors, on land and at sea.</p>
         <div class="footer-contact-line">
           T: <a href="tel:+443300569394">+44 (0)330 056 9394</a><br>
           E: <a href="mailto:info@popup-global.com">info@popup-global.com</a>
@@ -1661,7 +2068,7 @@ footer { background: var(--hero); padding: 70px 0 40px; }
         <ul class="footer-links">
           <li><a href="#services">What We Do</a></li>
           <li><a href="#work">Our Work</a></li>
-          <li><a href="#sectors">Land &amp; Sea</a></li>
+          <li><a href="#sectors">Where We Work</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#performers">Performers</a></li>
         </ul>
@@ -1683,19 +2090,18 @@ footer { background: var(--hero); padding: 70px 0 40px; }
           <li><a href="tel:+443300569394">+44 (0)330 056 9394</a></li>
           <li><a href="#contact">UK Office</a></li>
           <li><a href="#contact">UAE Office</a></li>
-          <!-- UPDATE: Add your actual Instagram and LinkedIn URLs below -->
-          <li><a href="https://www.instagram.com/popupglobal" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/company/popupglobal" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/wearepopupglobal" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/pop-up-global/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@popupglobal" target="_blank" rel="noopener">YouTube</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p class="footer-copy">© 2025 Pop Up Global. All rights reserved.</p>
       <div class="footer-socials">
-        <!-- UPDATE: Replace # with actual social URLs -->
-        <a href="https://www.instagram.com/popupglobal" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.linkedin.com/company/popupglobal" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#" target="_blank" rel="noopener">Vimeo</a>
+        <a href="https://www.instagram.com/wearepopupglobal" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/company/pop-up-global/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.youtube.com/@popupglobal" target="_blank" rel="noopener">YouTube</a>
       </div>
     </div>
   </div>
