@@ -4,33 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
-  /* Force fonts on iOS Mail — inline styles alone are overridden */
   body, table, td, a, p, div, span {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
   }
-  .sig-name {
-    font-family: 'Times New Roman', Georgia, Times, serif !important;
-    font-size: 15px !important;
-    font-weight: bold !important;
-    letter-spacing: 3px !important;
-    color: #1a1a1a !important;
-  }
-  .sig-title {
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 9px !important;
-    letter-spacing: 2px !important;
-    color: #888888 !important;
-  }
   .sig-label {
     font-family: Arial, Helvetica, sans-serif !important;
     font-size: 9px !important;
+    letter-spacing: 1px !important;
     color: #aaaaaa !important;
+    text-transform: uppercase;
   }
-  .sig-phone, .sig-phone a {
+  .sig-phone, .sig-phone a, .sig-email, .sig-email a {
     font-family: Arial, Helvetica, sans-serif !important;
     font-size: 12.5px !important;
     color: #2c2c2c !important;
+    text-decoration: none !important;
   }
   @media only screen and (max-width:600px){
     .sig-wrap  {width:100%!important;}
@@ -50,30 +39,45 @@
               font-family:Arial,Helvetica,sans-serif;">
   <colgroup><col style="width:245px;"><col style="width:455px;"></colgroup>
   <tr valign="middle">
-    <td width="245" class="sig-left" style="padding:20px 28px 20px 10px;vertical-align:middle;
-        text-align:center;border-right:1px solid #d4c9b0;">
+    <td class="sig-left" width="245"
+        style="padding:20px 28px 20px 10px;vertical-align:middle;
+               text-align:center;border-right:1px solid #d4c9b0;">
       <img class="sig-photo"
            src="https://garethmorris1988.github.io/Pop-Up-Global/signatures/anastacia.png"
            width="180" height="180"
            style="width:180px;height:180px;display:block;margin:0 auto 14px auto;
                   border-radius:50%;"
-           alt="" /><br style="line-height:0;font-size:0;" />
-      <img class="sig-name-img" src="https://garethmorris1988.github.io/Pop-Up-Global/signatures/anastacia_sourligas_name.png" width="131" height="27" style="display:block;width:131px;height:27px;margin:0 auto 12px auto;border:0;" alt="Anastacia Sourligas" /><br style="line-height:0;font-size:0;" />
-      <img class="sig-title-img" src="https://garethmorris1988.github.io/Pop-Up-Global/signatures/anastacia_sourligas_title.png" width="197" height="17" style="display:block;width:197px;height:17px;margin:0 auto;border:0;" alt="Community & Communications Manager" /><br style="line-height:0;font-size:0;" />
+           alt="" />
+      <img class="sig-name-img"
+           src="https://garethmorris1988.github.io/Pop-Up-Global/signatures/anastacia_sourligas_name.png"
+           width="131" height="27"
+           style="display:block;width:131px;height:27px;
+                  margin:0 auto 12px auto;border:0;"
+           alt="Anastacia Sourligas" />
+      <img class="sig-title-img"
+           src="https://garethmorris1988.github.io/Pop-Up-Global/signatures/anastacia_sourligas_title.png"
+           width="197" height="17"
+           style="display:block;width:197px;height:17px;
+                  margin:0 auto;border:0;"
+           alt="Community & Communications Manager" />
     </td>
-    <td width="455" class="sig-right" style="padding:20px 10px 20px 28px;vertical-align:middle;">
+    <td class="sig-right" width="455"
+        style="padding:20px 10px 20px 28px;vertical-align:middle;">
       <img class="sig-cp"
            src="https://garethmorris1988.github.io/Pop-Up-Global/signatures/creative_partners.png"
            width="360"
            style="display:block;width:360px;margin-bottom:14px;border:0;"
            alt="Creative Partners" />
-      <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:14px;">
-<tr><td style="padding-right:10px;white-space:nowrap;vertical-align:middle;padding-bottom:6px;"><img src="https://garethmorris1988.github.io/Pop-Up-Global/signatures/anastacia_sourligas_label_1.png" width="38" height="6" style="display:block;width:38px;height:6px;border:0;" alt="OFFICE" /></td><td style="vertical-align:middle;padding-bottom:6px;"><a href="tel:+443300569394" style="text-decoration:none;border:0;display:inline-block;"><img src="https://garethmorris1988.github.io/Pop-Up-Global/signatures/anastacia_sourligas_phone_1.png" width="108" height="12" style="display:block;width:108px;height:12px;border:0;" alt="+44 (0)3300 569 394" /></a></td></tr>
-<tr><td style="padding-right:10px;white-space:nowrap;vertical-align:middle;padding-bottom:6px;"><img src="https://garethmorris1988.github.io/Pop-Up-Global/signatures/anastacia_sourligas_label_2.png" width="20" height="6" style="display:block;width:20px;height:6px;border:0;" alt="UAE" /></td><td style="vertical-align:middle;padding-bottom:6px;"><a href="tel:+971506348771" style="text-decoration:none;border:0;display:inline-block;"><img src="https://garethmorris1988.github.io/Pop-Up-Global/signatures/anastacia_sourligas_phone_2.png" width="108" height="12" style="display:block;width:108px;height:12px;border:0;" alt="+971 (0)50 634 8771" /></a></td></tr>
-</table>
-      <a href="https://www.popup-global.com" target="_blank" style="text-decoration:none;">
+      <table cellpadding="0" cellspacing="0" border="0"
+             style="margin-bottom:14px;">
+      <tr><td class="sig-label" style="font-family:Arial,Helvetica,sans-serif;font-size:9px;letter-spacing:1px;color:#aaaaaa;text-transform:uppercase;padding-right:10px;white-space:nowrap;vertical-align:middle;padding-bottom:6px;">Office</td><td class="sig-phone" style="font-family:Arial,Helvetica,sans-serif;font-size:12.5px;color:#2c2c2c;vertical-align:middle;padding-bottom:6px;"><a href="tel:+443300569394" style="font-family:Arial,Helvetica,sans-serif;font-size:12.5px;color:#2c2c2c;text-decoration:none;">+44 (0)3300 569 394</a></td></tr>
+      <tr><td class="sig-label" style="font-family:Arial,Helvetica,sans-serif;font-size:9px;letter-spacing:1px;color:#aaaaaa;text-transform:uppercase;padding-right:10px;white-space:nowrap;vertical-align:middle;padding-bottom:6px;">UAE</td><td class="sig-phone" style="font-family:Arial,Helvetica,sans-serif;font-size:12.5px;color:#2c2c2c;vertical-align:middle;padding-bottom:6px;"><a href="tel:+971506348771" style="font-family:Arial,Helvetica,sans-serif;font-size:12.5px;color:#2c2c2c;text-decoration:none;">+971 (0)50 634 8771</a></td></tr>
+      </table>
+      <a href="https://www.popup-global.com" target="_blank"
+         style="text-decoration:none;">
         <img src="https://garethmorris1988.github.io/Pop-Up-Global/signatures/popup_logo.png" width="115"
-             style="display:block;width:115px;border:0;" alt="Pop Up Global" />
+             style="display:block;width:115px;border:0;"
+             alt="Pop Up Global" />
       </a>
     </td>
   </tr>
