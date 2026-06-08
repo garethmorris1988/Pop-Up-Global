@@ -966,13 +966,11 @@ nav.scrolled {
   width: auto;
   height: auto;
   object-fit: contain;
-  opacity: 0.75;
-  filter: grayscale(100%);
-  mix-blend-mode: multiply;
+  opacity: 1;
   margin-top: 20px;
 }
 .testi-card.featured .testi-logo {
-  filter: grayscale(100%) brightness(10);
+  filter: brightness(10);
   mix-blend-mode: normal;
   opacity: 0.5;
 }
@@ -986,6 +984,8 @@ nav.scrolled {
   width: 100%;
   overflow: hidden;
   position: relative;
+  user-select: none;
+  -webkit-user-select: none;
 }
 .clients-marquee::before,
 .clients-marquee::after {
@@ -1018,16 +1018,12 @@ nav.scrolled {
   width: auto;
   max-width: 180px;
   object-fit: contain;
-  opacity: 0.75;
-  filter: grayscale(100%);
-  mix-blend-mode: multiply;
-  transition: opacity 0.3s ease, filter 0.3s ease;
-  flex-shrink: 0;
-}
-.client-logo:hover {
   opacity: 1;
-  filter: grayscale(0%);
-  mix-blend-mode: normal;
+  flex-shrink: 0;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  draggable: false;
 }
 
 /* ─── LAND & SEA ─── */
@@ -1674,47 +1670,47 @@ footer { background: var(--hero); padding: 70px 0 40px; }
     <div class="clients-track">
       <!-- Set 1 -->
       <div class="clients-set">
-        <img class="client-logo" src="logo-mall-of-emirates.png" alt="Mall of the Emirates">
-        <img class="client-logo" src="logo-dell.png" alt="Dell">
-        <img class="client-logo" src="logo-disney.png" alt="Disney">
-        <img class="client-logo" src="logo-conrad.png" alt="Conrad Hotels">
-        <img class="client-logo" src="logo-warnerbros.png" alt="Warner Bros">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/1_c5eaa97b-cbc2-41c7-8ae3-368e95be2a42.png" alt="Moet & Chandon">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/2_ab361208-f706-4d1b-ab96-391fbad3e273.png" alt="Savills">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/3_2fa06da4-a61c-4ceb-a00a-1489370a0e26.png" alt="The Trafford Centre">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/4_3823dbfd-3df0-4f7c-b58b-6e811d5e7d89.png" alt="Manchester Airport">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/5_9e9addea-2349-47e2-b688-6ccc5675311f.png" alt="The Dubai Mall">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/6_e99a9fb9-5975-4590-a6a1-92796a177813.png" alt="JLL">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/7_df8317d0-6f48-4f88-bee3-04fad939e96d.png" alt="Emaar">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/8_76329937-f09a-4103-b9a6-9fc7c73df127.png" alt="Fred. Olsen Cruise Lines">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/9_63f9b187-ab13-4ea8-93ff-0d3c518b06c1.png" alt="Vakkaru Maldives">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/10_5a2516ab-e5cc-4937-b412-723401b66698.png" alt="Ferrari World">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/11_9226e81a-614b-4474-8b9d-f7972ee3b260.png" alt="Miral">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/12_a7ea9135-68f6-41b2-bd4a-688eaf373cce.png" alt="Mountain View">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/13_9708eec0-cd10-4de4-bcf3-8c8ea9734638.png" alt="P&O Cruises">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/14_67d8e1ff-1313-4849-85be-54fdacfab704.png" alt="Selfridges">
+        <img class="client-logo" src="logo-mall-of-emirates.png" alt="Mall of the Emirates" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="logo-dell.png" alt="Dell" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="logo-disney.png" alt="Disney" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="logo-conrad.png" alt="Conrad Hotels" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="logo-warnerbros.png" alt="Warner Bros" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="moet-chandon-logo.webp" alt="Moet & Chandon" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="savills-logo.webp" alt="Savills" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="trafford-logo.webp" alt="The Trafford Centre" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="man-airport-logo.webp" alt="Manchester Airport" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="dubai-mall-logo.webp" alt="The Dubai Mall" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="jll-logo.webp" alt="JLL" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="emaar-logo.webp" alt="Emaar" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="fred-olsen-logo.webp" alt="Fred. Olsen Cruise Lines" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="vakkaru-maldives-logo.webp" alt="Vakkaru Maldives" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="ferrari-world-logo.webp" alt="Ferrari World" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="miral-logo.webp" alt="Miral" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="mountain-view-logo.webp" alt="Mountain View" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="po-cruises-logo.webp" alt="P&amp;O Cruises" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="selfridges-logo.webp" alt="Selfridges" loading="lazy" decoding="async" draggable="false">
       </div>
       <!-- Set 2 (duplicate for seamless loop) -->
       <div class="clients-set" aria-hidden="true">
-        <img class="client-logo" src="logo-mall-of-emirates.png" alt="">
-        <img class="client-logo" src="logo-dell.png" alt="">
-        <img class="client-logo" src="logo-disney.png" alt="">
-        <img class="client-logo" src="logo-conrad.png" alt="">
-        <img class="client-logo" src="logo-warnerbros.png" alt="">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/1_c5eaa97b-cbc2-41c7-8ae3-368e95be2a42.png" alt="">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/2_ab361208-f706-4d1b-ab96-391fbad3e273.png" alt="">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/3_2fa06da4-a61c-4ceb-a00a-1489370a0e26.png" alt="">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/4_3823dbfd-3df0-4f7c-b58b-6e811d5e7d89.png" alt="">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/5_9e9addea-2349-47e2-b688-6ccc5675311f.png" alt="">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/6_e99a9fb9-5975-4590-a6a1-92796a177813.png" alt="">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/7_df8317d0-6f48-4f88-bee3-04fad939e96d.png" alt="">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/8_76329937-f09a-4103-b9a6-9fc7c73df127.png" alt="">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/9_63f9b187-ab13-4ea8-93ff-0d3c518b06c1.png" alt="">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/10_5a2516ab-e5cc-4937-b412-723401b66698.png" alt="">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/11_9226e81a-614b-4474-8b9d-f7972ee3b260.png" alt="">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/12_a7ea9135-68f6-41b2-bd4a-688eaf373cce.png" alt="">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/13_9708eec0-cd10-4de4-bcf3-8c8ea9734638.png" alt="">
-        <img class="client-logo" src="https://www.jesrose.co.uk/cdn/shop/files/14_67d8e1ff-1313-4849-85be-54fdacfab704.png" alt="">
+        <img class="client-logo" src="logo-mall-of-emirates.png" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="logo-dell.png" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="logo-disney.png" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="logo-conrad.png" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="logo-warnerbros.png" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="moet-chandon-logo.webp" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="savills-logo.webp" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="trafford-logo.webp" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="man-airport-logo.webp" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="dubai-mall-logo.webp" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="jll-logo.webp" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="emaar-logo.webp" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="fred-olsen-logo.webp" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="vakkaru-maldives-logo.webp" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="ferrari-world-logo.webp" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="miral-logo.webp" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="mountain-view-logo.webp" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="po-cruises-logo.webp" alt="" loading="lazy" decoding="async" draggable="false">
+        <img class="client-logo" src="selfridges-logo.webp" alt="" loading="lazy" decoding="async" draggable="false">
       </div>
     </div>
   </div>
@@ -2146,6 +2142,60 @@ footer { background: var(--hero); padding: 70px 0 40px; }
     });
   }, { threshold: 0.12 });
   reveals.forEach(el => observer.observe(el));
+
+  // ─── CLIENTS MARQUEE: drag / swipe to scroll manually ───
+  (function() {
+    const wrap  = document.querySelector('.clients-marquee');
+    const track = document.querySelector('.clients-track');
+    if (!wrap || !track) return;
+
+    let dragging = false, startX = 0, startTX = 0, resumeTimer, loopWidth = 0;
+
+    // Wrap tx so it always stays within [-loopWidth, 0] — no blank gaps
+    function normalizeTX(tx) {
+      if (!loopWidth) return tx;
+      var pos = ((tx % loopWidth) + loopWidth) % loopWidth;
+      return pos === 0 ? 0 : pos - loopWidth;
+    }
+
+    function getTX() {
+      return new DOMMatrix(getComputedStyle(track).transform).m41;
+    }
+
+    function startDrag(clientX) {
+      clearTimeout(resumeTimer);
+      loopWidth = track.scrollWidth / 2; // half = one full set of logos
+      dragging  = true;
+      startX    = clientX;
+      startTX   = normalizeTX(getTX());
+      track.style.animation = 'none';
+      track.style.transform = 'translateX(' + startTX + 'px)';
+      wrap.style.cursor = 'grabbing';
+    }
+
+    function moveDrag(clientX) {
+      if (!dragging) return;
+      track.style.transform = 'translateX(' + normalizeTX(startTX + clientX - startX) + 'px)';
+    }
+
+    function endDrag() {
+      if (!dragging) return;
+      dragging = false;
+      wrap.style.cursor = 'grab';
+      resumeTimer = setTimeout(function() {
+        track.style.animation = '';
+        track.style.transform = '';
+      }, 2000);
+    }
+
+    wrap.style.cursor = 'grab';
+    wrap.addEventListener('mousedown',  function(e) { e.preventDefault(); startDrag(e.clientX); });
+    document.addEventListener('mousemove',  function(e) { moveDrag(e.clientX); });
+    document.addEventListener('mouseup',    endDrag);
+    wrap.addEventListener('touchstart', function(e) { startDrag(e.touches[0].clientX); }, { passive: true });
+    wrap.addEventListener('touchmove',  function(e) { e.preventDefault(); moveDrag(e.touches[0].clientX); }, { passive: false });
+    wrap.addEventListener('touchend',   endDrag);
+  })();
 </script>
 </body>
 </html>
