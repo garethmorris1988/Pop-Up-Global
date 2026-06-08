@@ -1019,11 +1019,11 @@ nav.scrolled {
   max-width: 180px;
   object-fit: contain;
   opacity: 1;
+  mix-blend-mode: multiply;
   flex-shrink: 0;
   pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
-  draggable: false;
 }
 
 /* ─── LAND & SEA ─── */
@@ -1524,13 +1524,9 @@ footer { background: var(--hero); padding: 70px 0 40px; }
   <div class="hero-noise"></div>
 
   <div class="hero-video-wrap">
-    <iframe
-      src="https://www.youtube.com/embed/JMLFI3aOHW0?autoplay=1&mute=1&loop=1&playlist=JMLFI3aOHW0&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1"
-      frameborder="0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen
-      title="Pop Up Global Showreel"
-    ></iframe>
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="website-video.mp4" type="video/mp4">
+    </video>
   </div>
 
   <div class="hero-content">
